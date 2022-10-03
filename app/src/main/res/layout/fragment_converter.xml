@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -23,22 +22,33 @@
         android:id="@+id/fromCurrentTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="BYN"
         app:layout_constraintEnd_toEndOf="@id/fromCurrentFlagBtn"
         app:layout_constraintStart_toStartOf="@id/fromCurrentFlagBtn"
-        app:layout_constraintTop_toBottomOf="@id/fromCurrentFlagBtn"
-        android:text="BYN" />
+        app:layout_constraintTop_toBottomOf="@id/fromCurrentFlagBtn" />
+
 
     <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="wrap_content"
+        android:id="@+id/fromCurrentTextInputLayout"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toEndOf="@id/fromCurrentFlagBtn"
-        app:layout_constraintTop_toTopOf="@id/fromCurrentFlagBtn"
-        app:layout_constraintEnd_toEndOf="parent">
+        android:layout_marginStart="@dimen/input_text_margin"
+        android:layout_marginEnd="@dimen/input_text_margin"
+        android:gravity="end"
+        app:hintEnabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/barrier"
+        app:layout_constraintTop_toTopOf="@id/fromCurrentFlagBtn">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="wrap_content"
-            android:hint="@string/app_name"
-            android:layout_height="wrap_content"/>
+            android:id="@+id/fromCurrentTextInputEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:hint="@string/hint_string"
+            android:inputType="numberDecimal"
+            android:maxLength="19"
+            android:maxLines="1" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -56,10 +66,52 @@
         android:id="@+id/toCurrentTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="@id/toCurrentFlagBtn"
+        android:text="USD"
         app:layout_constraintEnd_toEndOf="@id/toCurrentFlagBtn"
-        app:layout_constraintTop_toBottomOf="@id/toCurrentFlagBtn"
-        android:text="USD"/>
+        app:layout_constraintStart_toStartOf="@id/toCurrentFlagBtn"
+        app:layout_constraintTop_toBottomOf="@id/toCurrentFlagBtn" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/toCurrentTextInputLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/input_text_margin"
+        android:layout_marginEnd="@dimen/input_text_margin"
+        android:gravity="end"
+        app:hintEnabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/barrier"
+        app:layout_constraintTop_toTopOf="@id/toCurrentFlagBtn">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/toCurrentTextInputEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:hint="@string/hint_string"
+            android:inputType="numberDecimal"
+            android:maxLength="19"
+            android:maxLines="1" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="right"
+        app:constraint_referenced_ids="toCurrentTV,fromCurrentFlagBtn,fromCurrentTV,toCurrentFlagBtn"
+        tools:layout_editor_absoluteX="411dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/convert_button_dimen"
+        android:layout_marginEnd="@dimen/input_text_margin"
+        android:text="@string/convert"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toCurrentTV" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

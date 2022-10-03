@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">MoneyConverter</string>
     <string name="converter_from_currency_icon_content_description" />
+    <string name="hint_string">0.0</string>
+    <string name="convert">Конвертировать</string>
 </resources>
