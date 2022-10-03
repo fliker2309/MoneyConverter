@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">MoneyConverter</string>
+    <string name="converter_from_currency_icon_content_description" />
 </resources>
