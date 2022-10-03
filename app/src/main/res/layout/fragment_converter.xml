@@ -28,6 +28,20 @@
         app:layout_constraintTop_toBottomOf="@id/fromCurrentFlagBtn"
         android:text="BYN" />
 
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/fromCurrentFlagBtn"
+        app:layout_constraintTop_toTopOf="@id/fromCurrentFlagBtn"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="wrap_content"
+            android:hint="@string/app_name"
+            android:layout_height="wrap_content"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
     <ImageView
         android:id="@+id/toCurrentFlagBtn"
         android:layout_width="@dimen/flag_fab_size"
