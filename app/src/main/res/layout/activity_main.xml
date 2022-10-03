@@ -1,53 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent" />
 
-    <ImageView
-        android:id="@+id/fromCurrentFlagBtn"
-        android:layout_width="@dimen/flag_fab_size"
-        android:layout_height="@dimen/flag_fab_size"
-        android:layout_marginStart="@dimen/flag_margin_size"
-        android:layout_marginTop="@dimen/flag_margin_size"
-        android:contentDescription="@string/converter_from_currency_icon_content_description"
-        android:src="@drawable/ic_belarus"
-        app:fabCustomSize="@dimen/flag_margin_size"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:maxImageSize="@dimen/flag_fab_size" />
-
-    <TextView
-        android:id="@+id/fromCurrentTV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="@id/fromCurrentFlagBtn"
-        app:layout_constraintStart_toStartOf="@id/fromCurrentFlagBtn"
-        app:layout_constraintTop_toBottomOf="@id/fromCurrentFlagBtn"
-        android:text="BYN" />
-
-    <ImageView
-        android:id="@+id/toCurrentFlagBtn"
-        android:layout_width="@dimen/flag_fab_size"
-        android:layout_height="@dimen/flag_fab_size"
-        android:layout_marginStart="@dimen/flag_margin_size"
-        android:layout_marginTop="@dimen/flag_margin_size"
-        android:src="@drawable/ic_usa"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/fromCurrentTV" />
-
-    <TextView
-        android:id="@+id/toCurrentTV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="@id/toCurrentFlagBtn"
-        app:layout_constraintEnd_toEndOf="@id/toCurrentFlagBtn"
-        app:layout_constraintTop_toBottomOf="@id/toCurrentFlagBtn"
-        android:text="USD"/>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
-
-
-   

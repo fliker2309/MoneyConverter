@@ -1,4 +1,4 @@
-package com.example.moneyconverter
+package com.example.moneyconverter.main.data.model
 
 data class DataItem(
 
