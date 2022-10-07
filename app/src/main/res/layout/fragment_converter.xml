@@ -22,33 +22,27 @@
         android:id="@+id/fromCurrentTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="BYN"
+        android:text="@string/byn"
         app:layout_constraintEnd_toEndOf="@id/fromCurrentFlagBtn"
         app:layout_constraintStart_toStartOf="@id/fromCurrentFlagBtn"
         app:layout_constraintTop_toBottomOf="@id/fromCurrentFlagBtn" />
 
-
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/fromCurrentTextInputLayout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/input_text_margin"
-        android:layout_marginEnd="@dimen/input_text_margin"
+        android:layout_marginStart="@dimen/small_dimen"
+        android:layout_marginEnd="@dimen/small_dimen"
         android:gravity="end"
         app:hintEnabled="false"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/barrier"
+        app:layout_constraintStart_toEndOf="@id/fromCurrentFlagBtn"
         app:layout_constraintTop_toTopOf="@id/fromCurrentFlagBtn">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/fromCurrentTextInputEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="end"
-            android:hint="@string/hint_string"
-            android:inputType="numberDecimal"
-            android:maxLength="19"
-            android:maxLines="1" />
+            android:layout_gravity="end"
+            android:hint="@string/zero_numb" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -66,42 +60,28 @@
         android:id="@+id/toCurrentTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="USD"
+        android:text="@string/usd"
         app:layout_constraintEnd_toEndOf="@id/toCurrentFlagBtn"
         app:layout_constraintStart_toStartOf="@id/toCurrentFlagBtn"
         app:layout_constraintTop_toBottomOf="@id/toCurrentFlagBtn" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/toCurrentTextInputLayout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/input_text_margin"
-        android:layout_marginEnd="@dimen/input_text_margin"
-        android:gravity="end"
+        android:layout_marginStart="@dimen/small_dimen"
+        android:layout_marginEnd="@dimen/small_dimen"
         app:hintEnabled="false"
+        android:gravity="end"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/barrier"
+        app:layout_constraintStart_toEndOf="@id/toCurrentFlagBtn"
         app:layout_constraintTop_toTopOf="@id/toCurrentFlagBtn">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/toCurrentTextInputEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="end"
-            android:hint="@string/hint_string"
-            android:inputType="numberDecimal"
-            android:maxLength="19"
-            android:maxLines="1" />
+            android:hint="@string/zero_numb" />
 
     </com.google.android.material.textfield.TextInputLayout>
-
-    <androidx.constraintlayout.widget.Barrier
-        android:id="@+id/barrier"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:barrierDirection="right"
-        app:constraint_referenced_ids="toCurrentTV,fromCurrentFlagBtn,fromCurrentTV,toCurrentFlagBtn"
-        tools:layout_editor_absoluteX="411dp" />
 
     <com.google.android.material.button.MaterialButton
         android:layout_width="wrap_content"
@@ -112,7 +92,6 @@
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/toCurrentTV" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
 
 

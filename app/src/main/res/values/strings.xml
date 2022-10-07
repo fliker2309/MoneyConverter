@@ -3,4 +3,7 @@
     <string name="converter_from_currency_icon_content_description" />
     <string name="hint_string">0.0</string>
     <string name="convert">Конвертировать</string>
+    <string name="zero_numb">0.0</string>
+    <string name="usd">USD</string>
+    <string name="byn">BYN</string>
 </resources>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <dimen name="small_dimen">8dp</dimen>
     <dimen name="input_text_margin">16dp</dimen>
     <dimen name="flag_margin_size">24dp</dimen>
     <dimen name="flag_fab_size">48dp</dimen>
