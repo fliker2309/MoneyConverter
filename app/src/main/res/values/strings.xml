@@ -6,4 +6,6 @@
     <string name="zero_numb">0.0</string>
     <string name="usd">USD</string>
     <string name="byn">BYN</string>
+    <string name="RUB">RUB</string>
+    <string name="EUR">EUR</string>
 </resources>
