@@ -1,14 +1,12 @@
 package com.example.moneyconverter.main.domain.model
 
-import androidx.room.ColumnInfo
-import androidx.room.Entity
-import androidx.room.PrimaryKey
-
-@Entity(tableName = "currencies")
 data class Currency(
-    @PrimaryKey
-    @ColumnInfo(name = "country")
-    val country: String,
-    @ColumnInfo(name = "value")
-    val value: Double
-)
+    private val country: String,
+    private val value: Double
+) {
+    interface Mapper<T> {
+        fun map(country: String, value: Double): T
+    }
+
+    fun <T> map(mapper: Mapper<T>): T = mapper.map(country, value)
+}

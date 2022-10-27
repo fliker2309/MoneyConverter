@@ -4,5 +4,5 @@ import retrofit2.http.GET
 
 interface CurrenciesService {
     @GET("api/kursExchange")
-    suspend fun getCurrencies(): List<>
+    suspend fun currencies(): List<CurrencyDTO>
 }

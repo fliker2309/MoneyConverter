@@ -1,4 +1,4 @@
-package com.example.moneyconverter.main.data.model
+package com.example.moneyconverter.main.data.network
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
