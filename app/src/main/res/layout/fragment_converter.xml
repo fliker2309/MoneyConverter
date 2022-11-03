@@ -56,15 +56,13 @@
         android:src="@drawable/ic_usa"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/belarusTV" />
-
     <TextView
-        android:id="@+id/usdTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/usd"
         app:layout_constraintEnd_toEndOf="@id/usdIV"
         app:layout_constraintStart_toStartOf="@id/usdIV"
-        app:layout_constraintTop_toBottomOf="@id/usdIV" />
+        app:layout_constraintTop_toBottomOf="@id/usdIV"
+        android:text="@string/usd"/>
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="0dp"
@@ -85,93 +83,17 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
-    <ImageView
-        android:id="@+id/rubIV"
-        android:layout_width="@dimen/flag_fab_size"
-        android:layout_height="@dimen/flag_fab_size"
-        android:layout_marginStart="@dimen/flag_margin_size"
-        android:layout_marginTop="@dimen/flag_margin_size"
-        android:src="@drawable/ic_russia"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/usdTV" />
-
-    <TextView
-        android:id="@+id/rubTV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/RUB"
-        app:layout_constraintEnd_toEndOf="@id/rubIV"
-        app:layout_constraintStart_toStartOf="@id/rubIV"
-        app:layout_constraintTop_toBottomOf="@id/rubIV" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/small_dimen"
-        android:layout_marginEnd="@dimen/small_dimen"
-        app:hintEnabled="false"
-        android:gravity="end"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/rubIV"
-        app:layout_constraintTop_toTopOf="@id/rubIV">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/rubEditText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/zero_numb" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <ImageView
-        android:id="@+id/eurIV"
-        android:layout_width="@dimen/flag_fab_size"
-        android:layout_height="@dimen/flag_fab_size"
-        android:layout_marginStart="@dimen/flag_margin_size"
-        android:layout_marginTop="@dimen/flag_margin_size"
-        android:src="@drawable/ic_euro"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/rubTV" />
-
-    <TextView
-        android:id="@+id/eurTV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/EUR"
-        app:layout_constraintEnd_toEndOf="@id/eurIV"
-        app:layout_constraintStart_toStartOf="@id/eurIV"
-        app:layout_constraintTop_toBottomOf="@id/eurIV" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayoutEuro"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/small_dimen"
-        android:layout_marginEnd="@dimen/small_dimen"
-        android:gravity="end"
-        app:hintEnabled="false"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/eurIV"
-        app:layout_constraintTop_toTopOf="@id/eurIV">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/eurEditText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/zero_numb" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
     <com.google.android.material.button.MaterialButton
         android:id="@+id/convertButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/input_text_margin"
+        android:layout_marginBottom="64dp"
         android:text="@string/convert"
         android:textColor="@color/black"
-        android:layout_marginTop="@dimen/convert_button_dimen"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutEuro" />
+        tools:layout_editor_absoluteY="440dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
 
 
